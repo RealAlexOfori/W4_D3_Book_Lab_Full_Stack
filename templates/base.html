@@ -18,16 +18,16 @@
       </header>
 
 <h1>Books</h1>
-{% for book in books_list %}
+{% for book in all_books %}
 <ul id="book-list">
     <li>
-        <a href="/books/{{books_list.index(book)}}">{{book.title}}</a>
+        <a href="/books/{{all_books.index(book)}}">{{book.title}}</a>
     </li>
     <li>
       Genre: {{book.genre}}
     </li>
     <li>
-        Author: {{book.author}}
+        Author: {{book.author.name}}
     </li>
 </ul>
 <hr>
